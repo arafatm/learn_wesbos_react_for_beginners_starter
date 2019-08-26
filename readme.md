@@ -22,6 +22,19 @@ Install npm dependencies from `package.json`
 `scripts` allow commands to be run e.g. `start` to start web
 server
 
+[:ship: f972a8a](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/f972a8a) 
+```bash
+npm install
+```
+
+If install fails, `rm -f package-lock.json` and `node_modules`
+folders
+
+`npm start` to start the web server
+
+[:ship: a1cb141](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a1cb141) test this works with an alert hello world
+- edit `src/index.js` and add a `alert("hi")`
+
 xxx
 ## Thinking and Understanding React Components
 
