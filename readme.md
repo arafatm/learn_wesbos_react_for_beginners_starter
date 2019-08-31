@@ -40,11 +40,36 @@ folders
 [:ship: a1cb141](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a1cb141) test this works with an alert hello world
 - edit `src/index.js` and add a `alert("hi")`
 
+You can find the :point: code compiled 
+- View source 
+- search for `alert("hi")` on one of these compiled js files
+
+```html
+<script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js"></script></body>
+```
+
 ## Creating our First Components
 
 Everything in React is a **Component**
 - reusable code
 - allows you to build your own "html" tags e.g. `<Fish />`
+
+[:ship:
+fa5d7b2](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/fa5d7b2)
+Our first `React.Component` with required `render()` 
+- note that nothing will happen because we haven't **mount**ed our component
+
+React allows us to not directly edit the DOM
+- **except** when mounting React
+
+[:ship:
+a806486](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a806486)
+`react-dom.render` to attach to DOM
+
+[:ship:
+ed5fb21](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/ed5fb21)
+Refactor StorePicker into it's own component class 
+- Have to `export` the component in order to `render` in the DOM
 
 xxx
 
