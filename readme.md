@@ -1,6 +1,9 @@
 # Wes Bos: React for Beginners
 
-Forked from https://github.com/wesbos/React-For-Beginners-Starter-Files
+
+Course streams https://courses.wesbos.com/account
+
+Starter code https://github.com/wesbos/React-For-Beginners-Starter-Files
 
 ## Introduction, Tooling and Editor Setup
 
@@ -35,9 +38,13 @@ folders
 [:ship: a1cb141](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a1cb141) test this works with an alert hello world
 - edit `src/index.js` and add a `alert("hi")`
 
-xxx
 ## Thinking and Understanding React Components
 
+Everything in React is a **Component**
+- reusable code
+- allows you to build your own "html" tags e.g. `<Fish />`
+
+xxx
 ## Creating our First Components
 
 ## Writing HTML with JSX
