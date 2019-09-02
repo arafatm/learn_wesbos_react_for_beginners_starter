@@ -5,14 +5,14 @@ Course streams https://courses.wesbos.com/account
 
 Starter code https://github.com/wesbos/React-For-Beginners-Starter-Files
 
-## Introduction, Tooling and Editor Setup
+## 01. Introduction, Tooling and Editor Setup
 
 Install:
 - nodejs
 - Chrome plugin for react
 - VSCode plugin for Babel
 
-## Thinking and Understanding React Components
+## 02. Thinking and Understanding React Components
 
 Install npm dependencies from `package.json`
 - `react-scripts` does compilation to run in browser; 
@@ -48,7 +48,7 @@ You can find the :point: code compiled
 <script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js"></script></body>
 ```
 
-## Creating our First Components
+## 03. Creating our First Components
 
 Everything in React is a **Component**
 - reusable code
@@ -71,7 +71,7 @@ ed5fb21](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/com
 Refactor StorePicker into it's own component class 
 - Have to `export` the component in order to `render` in the DOM
 
-## Writing HTML with JSX
+## 04. Writing HTML with JSX
 
 [:ship:
 7b9e90a](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/7b9e90a)
@@ -92,7 +92,7 @@ Also cant return sibling elements
 [:ship: b8f946a](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b8f946a) Example of a comment
 
 
-## Loading CSS into our React Application
+## 05. Loading CSS into our React Application
 
 [:ship: 6789e0c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/6789e0c) 
 Set up initial store picker
@@ -100,7 +100,7 @@ Set up initial store picker
 [:ship: 01005df](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/01005df)
 Import CSS
 
-## Creating our application layout with components
+## 06. Creating our application layout with components
 
 [:ship: d59778d](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d59778d)
 Create main `src/components/App.js`
@@ -117,7 +117,7 @@ Skeleton `Header`, `Inventory`, and `Order` components
 [:ship: bb0b977](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/bb0b977)
 Header component with some pretty css
 
-## Passing Dynamic data with props
+## 07. Passing Dynamic data with props
 
 **State** is the data home
 
@@ -141,7 +141,7 @@ Nodes rendered by React will have `$r` as seen in the React DevTools inspector
 [:ship: e700f14](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e700f14) 
 Pass final props to Header
 
-## Stateless Functional Components
+## 08. Stateless Functional Components
 
 Full `React.Component` allows things like
 - define custom state
@@ -163,7 +163,7 @@ return**
 :warning: Maybe not the best idea in case you need to conver the
 component to stateful component
 
-## Routing with React Router
+## 09. Routing with React Router
 
 2 popular routers: `React-Router` and `Next.JS`
 - using `React-Router` in this tutorial
@@ -177,7 +177,7 @@ Route for `/store/:id`
 [:ship: d42baf3](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d42baf3)
 Handle a catch-all 404 route
 
-## Helper and Utility Functions
+## 10. Helper and Utility Functions
 
 Included in starter project is [helper.js](./catch-of-the-day/src/helpers.js)
 - Note we `export function` vs `export default ...` in React
@@ -186,7 +186,7 @@ Included in starter project is [helper.js](./catch-of-the-day/src/helpers.js)
 [:ship: b3a25ad](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b3a25ad)
 Example of using helper
 
-## Events, Refs and this Binding
+## 11. Events, Refs and this Binding
 
 React wraps your events in
 [SyntheticEvents](https://reactjs.org/docs/events.html) to ensure cross browser
@@ -213,7 +213,7 @@ use constructor to bind my custom method with `bind(this)`
 method) is to declare a **property** set to an **arrow** function 
 - Property is bound to the instance
 
-## Handling Events
+## 12. Handling Events
 
 [:ship: 51de9f1](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/51de9f1)
 now that the event handler is bound correctly we have access to
@@ -227,41 +227,86 @@ Complete the routing based on the event
 
 :fire: You can see `this.props.history` in the React console
 
-## Understanding State
+## 13. Understanding State
 
-[:ship: b65d91b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b65d91b)
-commet
+**State** is an object that holds data that itself and it's children need
+
+[:ship: d928af6](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d928af6)
+Extract AddFishForm into its own reusable component
+
+[:ship: fa0d104](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/fa0d104)
+Completed Add Fish form
+
+[:ship: 4a3f459](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/4a3f459)
+Create **Ref** to all form inputs
+
+[:ship: dcc70e0](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/dcc70e0)
+Added helpers for defaultValues on Inventory form
+
+[:ship: e2aa4ee](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e2aa4ee)
+Price is a float, not str
+
+:warning: Data can be passed down to children, but not to parent. We need to
+move the Inventory Data into App so it's accessible to Order and Header
+
+[:ship: 81467b4](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/81467b4)
+Set up App to handle **state**
+
+[:ship: 26470c0](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/26470c0)
+App.addfish method
+
+[:ship: 172e822](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/172e822)
+Pass reference to App.addFish as a **prop** to Inventory and AddFishForm
+
+[:ship: 4d7d1de](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/4d7d1de)
+Call App.addFish from AddFishForm
+
+How do we add a fish to the State :point_up:?
+- `this.state.fishes.push(fish);` If this was an Array
+- `this.state.fishes.fish1 = fish;` If this was an Object
+
+**However**, React provides it's own methods for State management with `setState`
+
+[:ship: 916decf](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/916decf)
+Manage App.state.fishes using **setState**
+
+[:ship: a51b7df](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a51b7df)
+Refresh AddFishForm on Submit with `e.currentTarget.reset()`
+
+:fire: `setState` is able to update individual pieces of state. In examples
+above we `setState({ fishes })` ignoring `order` which is also managed in the
+same state
 
 xxx
 
-## Loading data into state onClick
+## 14. Loading data into state onClick
 
-## Displaying State with JSX
+## 15. Displaying State with JSX
 
-## Updating our Order State
+## 16. Updating our Order State
 
-## Displaying Order State with JSX
+## 17. Displaying Order State with JSX
 
-## Persisting our State with Firebase
+## 18. Persisting our State with Firebase
 
-## Persisting Order State with localstorage
+## 19. Persisting Order State with localstorage
 
-## Bi-directional Data Flow and Live State Editing
+## 20. Bi-directional Data Flow and Live State Editing
 
-## Removing Items from State
+## 21. Removing Items from State
 
-## Animating React Components
+## 22. Animating React Components
 
-## Component Validation with PropTypes
+## 23. Component Validation with PropTypes
 
-## Authentication
+## 24. Authentication
 
-## Building React for Production
+## 25. Building React for Production
 
-## Deploying to Now
+## 26. Deploying to Now
 
-## Deploying to Netlify
+## 27. Deploying to Netlify
 
-## Deploying to an Apache Server
+## 28. Deploying to an Apache Server
 
-## Ejecting from create-react-app
+## 29. Ejecting from create-react-app
