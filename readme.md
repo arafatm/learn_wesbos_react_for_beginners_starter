@@ -71,11 +71,33 @@ ed5fb21](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/com
 Refactor StorePicker into it's own component class 
 - Have to `export` the component in order to `render` in the DOM
 
-xxx
-
 ## Writing HTML with JSX
 
+[:ship:
+7b9e90a](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/7b9e90a)
+:warning: **not advised** example using `React.CreateElement` to render instead
+of JSX
+- **note** the use of `className` to set CSS class on a component
+
+[:ship: a012ae1](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a012ae1) 
+:warning: This example won't work since `return` expects single line
+- [:ship: 60e4c1c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/60e4c1c)
+  To fix previous example wrap multiline return in `return ( ... )`
+
+[:ship: e7df666](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e7df666)
+Also cant return sibling elements
+- [:ship: fc69d9c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/fc69d9c)
+  To allow sibling elements, use a `<React.Fragment>`
+
+[:ship: b8f946a](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b8f946a) Example of a comment
+
+
 ## Loading CSS into our React Application
+
+[:ship: 6789e0c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/6789e0c) 
+Set up initial store picker
+
+xxx
 
 ## Creating our application layout with components
 
