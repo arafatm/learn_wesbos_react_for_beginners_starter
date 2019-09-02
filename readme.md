@@ -143,9 +143,29 @@ Pass final props to Header
 
 ## Stateless Functional Components
 
-xxx
+Full `React.Component` allows things like
+- define custom state
+- define custom functions
+- lifecycle methods e.g. `ComponentWillUnmount()`
+
+**Stateless Functional Components** are **dumb components**. Defined as a
+`function` with a single `return`
+- :warning: Can't `this.props` so have to pass props as function param
+
+[:ship: f04ecef](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/f04ecef)
+Example of simple **Stateless Functional Component**
+
+[:ship: ecddb6b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/ecddb6b)
+Stateless Functional Component as an **arrow function** with **implicit
+return**
+- No real benefit afaik
+
+:thinking_face: Maybe not the best idea in case you need to conver the
+component to stateful component
 
 ## Routing with React Router
+
+xxx
 
 ## Helper and Utility Functions
 
