@@ -5,8 +5,9 @@ class StorePicker extends React.Component {
   render() { // Every React.Component requires a render()
     return (
       <form action="" className="store-picker">
-        { /* This is a comment in a JS fragment */ }
-        <div>test</div>
+        <h2>Please Enter A Store</h2>
+        <input type="text" required placeholder="Store Name" />
+        <button type="submit">Visit Store -></button>
       </form>
     )
   }
