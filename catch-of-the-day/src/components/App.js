@@ -5,6 +5,11 @@ import Order from './Order';
 
 class App extends React.Component {
 
+  state = {
+    fishes: {},
+    order: {}
+  };
+
   render() {
     return (
       <div className="catch-of-the-day">
