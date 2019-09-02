@@ -16,8 +16,11 @@ class App extends React.Component {
     const fishes = {...this.state.fishes} // Copies state, not a deep clone
     fishes[`fish${Date.now()}`] = fish; // Using timestamp to append to "fish" for uniqueness
     this.setState({ fishes: fishes }); // setState manages updating state.fishes
-
   };
+
+  loadSampleFishes = () => {
+    console.log('Loading Sample Fishes');
+  }
 
   render() {
     return (
@@ -26,7 +29,7 @@ class App extends React.Component {
           <Header tagline="Fresh Seafood Market" />
         </div>
         <Order />
-        <Inventory addFish={this.addFish} />
+        <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
   }
