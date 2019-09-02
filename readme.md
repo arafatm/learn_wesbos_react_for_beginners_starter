@@ -165,9 +165,21 @@ component to stateful component
 
 ## Routing with React Router
 
-xxx
+2 popular routers: `React-Router` and `Next.JS`
+- using `React-Router` in this tutorial
+
+[:ship: ecddb6b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/3ab66f2)
+Define our first root **route**
+
+[:ship: 927391e](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/927391e)
+Route for `/store/:id`
+
+[:ship: d42baf3](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d42baf3)
+Handle a catch-all 404 route
 
 ## Helper and Utility Functions
+
+xxx
 
 ## Events, Refs and this Binding
 
