@@ -5,7 +5,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="catch-of-the-day">
-        Catch of the Day
+        <div className="menu">
+          <Header />
+        </div>
+        <Inventory />
+        <Order />
       </div>
     );
   }
