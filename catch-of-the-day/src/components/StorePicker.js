@@ -10,10 +10,11 @@ class StorePicker extends React.Component {
     event.preventDefault(); 
 
     // get the text from the input
+    const storeName = this.myInput.current.value;
 
     // route to /store/whatever-they-entered
+    this.props.history.push(`/store/${storeName}`);
 
-    console.log(this.myInput.current.value);
   };
 
   render() { // Every React.Component requires a render()
