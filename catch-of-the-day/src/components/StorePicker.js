@@ -13,8 +13,8 @@ class StorePicker extends React.Component {
 
     // route to /store/whatever-they-entered
 
-    console.log(this);
-  }
+    console.log(this.myInput.current.value);
+  };
 
   render() { // Every React.Component requires a render()
     return (
