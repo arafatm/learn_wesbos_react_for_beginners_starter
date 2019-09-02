@@ -14,7 +14,7 @@ class AddFishForm extends React.Component {
 
     const fish = {
       name: this.nameRef.current.value,
-      price: this.priceRef.current.value,
+      price: parseFloat(this.priceRef.current.value), // convert str to float (cents)
       status: this.statusRef.current.value,
       desc: this.descRef.current.value,
       image: this.imageRef.current.value,
