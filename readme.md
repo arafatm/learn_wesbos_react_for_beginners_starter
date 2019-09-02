@@ -128,7 +128,7 @@ Example of using **props**
 - note that non-strings need to be escaped
 - You can view the props in React console
 
-:thinking_face: 
+:fire: 
 When looking at code in the inspector, when you select an html node you'll see
 something like ` == $0`. You can type that in the console to inspect that
 element.
@@ -160,7 +160,7 @@ Stateless Functional Component as an **arrow function** with **implicit
 return**
 - No real benefit afaik
 
-:thinking_face: Maybe not the best idea in case you need to conver the
+:warning: Maybe not the best idea in case you need to conver the
 component to stateful component
 
 ## Routing with React Router
