@@ -3,6 +3,10 @@ import { getFunName } from '../helpers.js';
 
 class StorePicker extends React.Component {
 
+  constructor() {
+    super();
+    this.goToStore = this.goToStore.bind(this);
+  }
   myInput = React.createRef();
 
   goToStore(event) {
@@ -11,13 +15,8 @@ class StorePicker extends React.Component {
 
     // get the text from the input
 
-
     // route to /store/whatever-they-entered
 
-    console.log(this.myInput);
-  }
-
-  componentDidMount() {
     console.log(this);
   }
 
