@@ -11,7 +11,7 @@ class App extends React.Component {
   };
 
   addFish = (fish) => {
-    console.log('Adding a fish!');
+    console.log(fish);
   };
 
   render() {
