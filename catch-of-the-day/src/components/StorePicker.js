@@ -17,8 +17,11 @@ class StorePicker extends React.Component {
     console.log(this.myInput);
   }
 
+  componentDidMount() {
+    console.log(this);
+  }
+
   render() { // Every React.Component requires a render()
-    console.log(this); // to debut this StorePicker
     return (
       <form action="" className="store-selector" onSubmit={this.goToStore}>
         <h2>Please Enter A Store</h2>
