@@ -97,11 +97,29 @@ Also cant return sibling elements
 [:ship: 6789e0c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/6789e0c) 
 Set up initial store picker
 
-xxx
+[:ship: 01005df](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/01005df)
+Import CSS
 
 ## Creating our application layout with components
 
+[:ship: d59778d](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d59778d)
+Create main `src/components/App.js`
+
+[:ship: a88878e](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a88878e)
+Use `App` as default component
+
+[:ship: 411df3b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/411df3b)
+Scaffold out our App with needed components
+
+[:ship: d9e48e7](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d9e48e7)
+Skeleton `Header`, `Inventory`, and `Order` components
+
+[:ship: bb0b977](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/bb0b977)
+Header component with some pretty css
+
 ## Passing Dynamic data with props
+
+xxx
 
 ## Stateless Functional Components
 
