@@ -277,11 +277,19 @@ Refresh AddFishForm on Submit with `e.currentTarget.reset()`
 above we `setState({ fishes })` ignoring `order` which is also managed in the
 same state
 
-xxx
-
 ## 14. Loading data into state onClick
 
+Provide a button `loadSampleFishes`
+
+[:ship: de9e4e7](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/de9e4e7)
+Wire up App.loadSampleFishes in Inventory as a **prop**
+
+[:ship: e142dea](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e142dea)
+Add sample Fishes to App state
+
 ## 15. Displaying State with JSX
+
+xxx
 
 ## 16. Updating our Order State
 
