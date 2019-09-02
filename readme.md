@@ -219,14 +219,18 @@ method) is to declare a **property** set to an **arrow** function
 now that the event handler is bound correctly we have access to
 `this.myInput.current.value`
 
-Because StorePicker is a child of Router, we ahve access to `history` and `location`
+Because StorePicker is a child of Router, we have access to `history` and `location`
 
 [:ship: 0209e27](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/0209e27)
-Complete the routing based on the event - :warning: note the use of backticks in the `this.props.history.push`
+Complete the routing based on the event 
+- :warning: note the use of backticks in the `this.props.history.push`
 
 :fire: You can see `this.props.history` in the React console
 
 ## Understanding State
+
+[:ship: b65d91b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b65d91b)
+commet
 
 xxx
 
