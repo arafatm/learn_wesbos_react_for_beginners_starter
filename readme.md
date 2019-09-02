@@ -119,9 +119,31 @@ Header component with some pretty css
 
 ## Passing Dynamic data with props
 
-xxx
+**State** is the data home
+
+**Props** is where the data goes
+
+[:ship: 3cc09b2](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/3cc09b2) 
+Example of using **props** 
+- note that non-strings need to be escaped
+- You can view the props in React console
+
+:thinking_face: 
+When looking at code in the inspector, when you select an html node you'll see
+something like ` == $0`. You can type that in the console to inspect that
+element.
+- Also, can `$1`, `$2`, etc for history of elements selected
+
+![$0 in the console](console.0.png)
+
+Nodes rendered by React will have `$r` as seen in the React DevTools inspector 
+
+[:ship: e700f14](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e700f14) 
+Pass final props to Header
 
 ## Stateless Functional Components
+
+xxx
 
 ## Routing with React Router
 
