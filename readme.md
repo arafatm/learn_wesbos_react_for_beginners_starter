@@ -179,9 +179,16 @@ Handle a catch-all 404 route
 
 ## Helper and Utility Functions
 
-xxx
+Included in starter project is [helper.js](./catch-of-the-day/src/helpers.js)
+- Note we `export function` vs `export default ...` in React
+- :point_up: allows us to select which function we want to import in our React app
+
+[:ship: b3a25ad](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b3a25ad)
+Example of using helper
 
 ## Events, Refs and this Binding
+
+xxx
 
 ## Handling Events
 
