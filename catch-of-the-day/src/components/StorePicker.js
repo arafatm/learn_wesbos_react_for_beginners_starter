@@ -4,12 +4,10 @@ class StorePicker extends React.Component {
 
   render() { // Every React.Component requires a render()
     return (
-      <React.Fragment>
-        <p>Fish!</p>
-        <form action="" className="store-picker">
-          <div>test</div>
-        </form>
-      </React.Fragment>
+      <form action="" className="store-picker">
+        { /* This is a comment in a JS fragment */ }
+        <div>test</div>
+      </form>
     )
   }
 }
