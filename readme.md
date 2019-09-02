@@ -188,9 +188,34 @@ Example of using helper
 
 ## Events, Refs and this Binding
 
-xxx
+React wraps your events in
+[SyntheticEvents](https://reactjs.org/docs/events.html) to ensure cross browser
+compatibility
+
+[:ship: e1924e1](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e1924e1)
+Example of click event handler
+
+[:ship: 2586acf](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/2586acf)
+:warning: Trying to use `ref` but `this` isnt referencing correctly. Have to
+use component lifecycle methods
+- :fire: `render()` gets called before `componentDidMount` 
+
+[:ship: d4f5828](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d4f5828)
+:warning: Using `componentDidMount` we can now reference `this`; 
+- However, `this` is not available in custom methods in component
+
+[:ship: ae878d3](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/ae878d3)
+use constructor to bind my custom method with `bind(this)` 
+- :warning: Note that `super()` is required
+
+[:ship: bc91a24](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/bc91a24)
+:fire: Alternative to bind in constructor (which would be required for each
+method) is to declare a **property** set to an **arrow** function 
+- Property is bound to the instance
 
 ## Handling Events
+
+xxx
 
 ## Understanding State
 
