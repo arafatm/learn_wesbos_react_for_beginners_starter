@@ -12,6 +12,11 @@ class App extends React.Component {
 
   addFish = (fish) => {
     console.log(fish);
+
+    const fishes = {...this.state.fishes} // Copies state, not a deep clone
+    fishes[`fish${Date.now()}`] = fish; // Using timestamp to append to "fish" for uniqueness
+    this.setState({ fishes: fishes }); // setState manages updating state.fishes
+
   };
 
   render() {
