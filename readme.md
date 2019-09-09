@@ -289,6 +289,41 @@ Add sample Fishes to App state
 
 ## 15. Displaying State with JSX
 
+Display all Fish in the Header Component.
+
+[:ship: 2a7c04e](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/2a7c04e)
+Set up Fish component
+
+:warning: JSX does not have flow control. Have to use regular JS
+
+:computer: In the Console, try `$r.state.fishes`
+
+[:ship: f99518f](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/f99518f)
+Iterate over fishes state keys with `Object.keys` and `map`
+
+:warning: In order for React to be performant, it requires props to have keys.
+At this point the console spits out 
+`Warning: Each child in a list should have a unique "key" prop.`
+
+[:ship: 7efb4cd](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/7efb4cd)
+Pass a key to Fish to avoid warning :point_up:
+
+[:ship: 966486a](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/966486a)
+Render Fish passing "details" as a prop. 
+- :warning: details is not a keyword, can use anything we want
+
+:fire: In the next example note the use of [ES6 Destructuring](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) to quickly set variables.
+- e.g. `const { image, name } = this.props.details`
+
+[:ship: e487fc3](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e487fc3)
+Set up Fish component using props
+
+[:ship: 0c6d013](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/0c6d013)
+Use `formatPrice` helper to prettify Fish.price
+
+[:ship: 9a507de](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/9a507de)
+Display all Fish details
+
 xxx
 
 ## 16. Updating our Order State
