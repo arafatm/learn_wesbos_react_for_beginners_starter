@@ -301,7 +301,8 @@ Set up Fish component
 [:ship: f99518f](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/f99518f)
 Iterate over fishes state keys with `Object.keys` and `map`
 
-:warning: In order for React to be performant, it requires props to have keys.
+:warning: **In order for React to be performant, it requires props to have keys.**
+
 At this point the console spits out 
 `Warning: Each child in a list should have a unique "key" prop.`
 
@@ -324,11 +325,65 @@ Use `formatPrice` helper to prettify Fish.price
 [:ship: 9a507de](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/9a507de)
 Display all Fish details
 
-xxx
-
 ## 16. Updating our Order State
 
+[:ship: 9bf0f87](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/9bf0f87)
+Disable "Add to Cart" button when a fish is out of inventory
+
+[:ship: a75f72b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a75f72b)
+Using **ternary operator** display "Sold Out" when fish is unavailable
+
+[:ship: fa003de](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/fa003de)
+addToOrder fn must be in App since that is where our State is
+
+[:ship: e09f939](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e09f939)
+App.addToOrder implementation
+
+:books: To test out the function, in the React Console, select "App"
+which will be assigned to `$r`. Then...
+
+```javascript
+a = $r
+
+a.addToOrder('fish1'); 
+a.addToOrder('fish1'); 
+a.addToOrder('fish2');
+
+a.state.order
+// {fish1: 2, fish2: 1}
+```
+
+[:ship: 73c657d](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/73c657d)
+Pass App.addtoOrder to Fish
+
+:caution: :caution: :caution: 
+At this point, `Fish` can't access `this.props.keys` because `key` is a
+reserved keyword. So we have to pass the key using some other keyword. 
+
+:books: Remember that components should have keys to make React
+performant. https://reactjs.org/docs/reconciliation.html#keys
+
+[:ship: 33bafef](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/33bafef)
+`key` is special in react so cant pass it as a prop
+
+[:ship: dc3881c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/dc3881c)
+Pass key using keyword `index`
+
+[:ship: 8ecc03e](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/8ecc03e)
+Handle button event onClick to addToOrder
+
+[:ship: 2eb8f52](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/2eb8f52)
+Same as above with a one-liner
+
 ## 17. Displaying Order State with JSX
+
+[:ship: a5ba823](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a5ba823)
+Pass props to Order using an **Object Spread**
+
+[:ship: a40dcc6](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a40dcc6)
+:caution: however, dont use Object Spread. Pass what you need explicitly
+
+xxx
 
 ## 18. Persisting our State with Firebase
 
