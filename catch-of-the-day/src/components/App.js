@@ -36,7 +36,7 @@ class App extends React.Component {
             )}
           </ul>
         </div>
-        <Order />
+        <Order {...this.state} /> { /* Pass prop using Object Spread */ }
         <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
