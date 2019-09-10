@@ -41,12 +41,19 @@ class App extends React.Component {
         <div className="menu">
           <Header tagline="Fresh Seafood Market" />
           <ul className="fishes">
-            {Object.keys(this.state.fishes).map(
-              key => <Fish key={key} details={this.state.fishes[key]} />
+            {Object.keys(this.state.fishes).map(key =>
+              <Fish
+                key={key} 
+                details={this.state.fishes[key]} 
+                addToOrder={this.addToOrder}
+                />
             )}
           </ul>
         </div>
-        <Order fishes={this.state.fishes} order={this.state.order} />
+        <Order 
+          fishes={this.state.fishes} 
+          order={this.state.order} 
+        />
         <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
