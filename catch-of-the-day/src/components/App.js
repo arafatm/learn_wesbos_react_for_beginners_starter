@@ -4,6 +4,7 @@ import Inventory from './Inventory';
 import Order from './Order';
 import sampleFishes from '../sample-fishes';
 import Fish from './Fish';
+import { thisTypeAnnotation } from '@babel/types';
 
 class App extends React.Component {
 
@@ -27,8 +28,11 @@ class App extends React.Component {
 
   addToOrder = (key) => {
     // 1. take a copy of state
+    const order = { ...this.state.order };
     // 2. add or increment a fish to the order
+    order[key] = order[key] + 1 || 1; // set to 1 if empty or increment
     // 3. call setState to update our state
+    this.setState({ order });
   };
 
   render() {
