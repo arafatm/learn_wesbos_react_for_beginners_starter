@@ -383,11 +383,36 @@ Pass props to Order using an **Object Spread**
 [:ship: a40dcc6](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a40dcc6)
 :caution: however, dont use Object Spread. Pass what you need explicitly
 
-xxx
-
 ## 18. Persisting our State with Firebase
 
+[:ship: 318f19f](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/318f19f)
+Order div container
+
+[:ship: 0ac2c16](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/0ac2c16)
+pass state.order to Order and display orderIds
+
+[:ship: 583a513](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/583a513)
+Display running total cost of fish added to order
+- :bulb: Using [`reduce` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) 
+
+[:ship: 66bd160](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/66bd160)
+Use `formatPrice` helper to display cents in dollars
+
+[:ship: 1d3c685](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/1d3c685)
+Use a **render function** to abstract some of the renders
+
+[:ship: ff5c10e](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/ff5c10e)
+display fish with individual order price
+
+[:ship: 6f65340](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/6f65340)
+If fish becomes unavailable, update the order immediately
+
+[:ship: 7ba1277](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/7ba1277)
+prettify individual orders
+
 ## 19. Persisting Order State with localstorage
+
+xxx
 
 ## 20. Bi-directional Data Flow and Live State Editing
 
