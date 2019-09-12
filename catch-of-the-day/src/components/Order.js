@@ -5,7 +5,14 @@ import { link } from 'fs';
 class Order extends React.Component {
 
   renderOrder = (key) => {
-    return <li>{key}</li>
+    const fish = this.props.fishes[key];
+    const count = this.props.order[key];
+
+    return <li>
+      {count} lbs {fish.name};
+
+      {formatPrice(count * fish.price)}
+    </li>
   }
 
   render() {
