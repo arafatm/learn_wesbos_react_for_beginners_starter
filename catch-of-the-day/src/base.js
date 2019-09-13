@@ -13,3 +13,9 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 // Set up Rebase bindings
 const base = Rebase.createClass(firebaseApp.database());
+
+// This is a named export
+export { firebaseApp };
+
+// this is a default export
+export default base;
