@@ -410,6 +410,67 @@ prettify individual orders
 
 ## 18. Persisting our State with Firebase
 
+Firebase uses websockets
+
+Use Firebase to store fishes (inventory). Will use LocalStorage (next
+chapter) to store Order
+
+Set up FireBase
+- https://console.firebase.google.com/?pli=1
+- `Create a Project`
+- I named the project `wesbos-react-for-beginners`
+
+[:ship: 1dce961](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/1dce961)
+import `re-base` and `firebase` libraries
+
+In FB console, https://console.firebase.google.com/project/wesbos-react-for-beginne-3d560/database
+- `Database`
+- `Create Database` in the Realtime Database section
+- Set initial setup to allow all while in development
+
+Get connection strings
+- https://console.firebase.google.com/project/wesbos-react-for-beginne-3d560/overview
+- `Web App` link (might be an icon at the top banner)
+- `Register App`
+- Copy the connection info `apiKey`, `authDomain`, and `databaseURL`
+
+[:ship: 0746fe9](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/0746fe9)
+Initialize firebase connection
+
+[:ship: 6b79e9b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/6b79e9b)
+Set up Rebase bindings
+
+[:ship: 0844158](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/0844158)
+export `firebaseApp` as a named export and `base` as a default export
+
+Will be using
+[`componentDidMount`](https://reactjs.org/docs/react-component.html#componentdidmount)
+which is a method run after the component output has been rendered to the
+DOM.
+
+From the docs: `componentDidMount() is invoked immediately after a
+component is mounted (inserted into the tree). Initialization that
+requires DOM nodes should go here. If you need to load data from a remote
+endpoint, this is a good place to instantiate the network request.`
+
+Also see other lifecycle methods here
+https://reactjs.org/docs/react-component.html#componentdidmount
+
+[:ship: c1ef681](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/c1ef681)
+Sync with firebase
+
+At this point if you go to console.firebase, under Database, you can see
+the synced data from your app
+
+:bulb: You can now change data in firebase and watch it auto sync in your
+app. e.g. In firebase, change "Pacific Halibut" to "Atlantic Halibut"
+
+[:ship: c580e93](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/c580e93)
+When we mount a component, if the user goes back in browser history, we have to remove the reference to firebase else we end up with a memory leak
+
+[:ship: fa500f3](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/fa500f3)
+unmount component when we leave the page
+
 xxx
 
 ## 19. Persisting Order State with localstorage
