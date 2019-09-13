@@ -11,3 +11,5 @@ var firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
+// Set up Rebase bindings
+const base = Rebase.createClass(firebaseApp.database());
