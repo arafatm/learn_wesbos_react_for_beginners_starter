@@ -5,6 +5,7 @@ import Order from './Order';
 import sampleFishes from '../sample-fishes';
 import Fish from './Fish';
 import { thisTypeAnnotation } from '@babel/types';
+import base from '../base';
 
 class App extends React.Component {
 
@@ -12,6 +13,17 @@ class App extends React.Component {
     fishes: {},
     order: {}
   };
+
+  componentDidMount() {
+    // `ref` in firebase is reference to particular piece of data
+    // `storeId` in React Console under App -> Props -> match : Object -> params -> storeId
+    this.ref = base.syncState(`${this.props.match.params.storeId}/fishes`, {
+      context: this,
+      state: 'fishes'
+    });
+  };
+
+  // Custom Methods
 
   addFish = (fish) => {
     console.log(fish);
@@ -24,7 +36,7 @@ class App extends React.Component {
   loadSampleFishes = () => {
     console.log('Loading Sample Fishes');
     this.setState({ fishes: sampleFishes });
-  }
+  };
 
   addToOrder = (key) => {
     // 1. take a copy of state
@@ -58,7 +70,7 @@ class App extends React.Component {
         <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
-  }
+  };
 }
 
 export default App;
