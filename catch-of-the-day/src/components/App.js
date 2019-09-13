@@ -24,7 +24,7 @@ class App extends React.Component {
   };
 
   componentWillUnmount() {
-    console.log(`unmounting store ${this.props.match.params.storeId} to avoid memory leak from componentDidMount`);
+    base.removeBinding(this.ref);
   }
 
   // Custom Methods
