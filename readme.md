@@ -383,8 +383,6 @@ Pass props to Order using an **Object Spread**
 [:ship: a40dcc6](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/a40dcc6)
 :caution: however, dont use Object Spread. Pass what you need explicitly
 
-## 18. Persisting our State with Firebase
-
 [:ship: 318f19f](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/318f19f)
 Order div container
 
@@ -410,9 +408,12 @@ If fish becomes unavailable, update the order immediately
 [:ship: 7ba1277](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/7ba1277)
 prettify individual orders
 
-## 19. Persisting Order State with localstorage
+## 18. Persisting our State with Firebase
 
 xxx
+
+## 19. Persisting Order State with localstorage
+
 
 ## 20. Bi-directional Data Flow and Live State Editing
 
@@ -433,3 +434,7 @@ xxx
 ## 28. Deploying to an Apache Server
 
 ## 29. Ejecting from create-react-app
+
+# Next courses
+
+- (free) https://cssgrid.io/
