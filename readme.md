@@ -471,12 +471,53 @@ When we mount a component, if the user goes back in browser history, we have to 
 [:ship: fa500f3](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/fa500f3)
 unmount component when we leave the page
 
-xxx
-
 ## 19. Persisting Order State with localstorage
 
+localstorage
+- a little easier to use than cookies
+- key value token
+- See in Web Dev console -> Application -> Storage
+
+Will be using [`componentDidUpdate()`](https://reactjs.org/docs/react-component.html#componentdidupdate)
+- invoked immediately after updating occurs. 
+- not called for the initial render.
+
+You may call `setState()` immediately in `componentDidUpdate()` but note
+that it **must be wrapped in a condition**, or **you’ll cause an infinite
+loop**.
+
+[:ship: b47776b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b47776b)
+Using componentDidUpdate
+
+[:ship: 37aa7bf](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/37aa7bf)
+Add Order to localStorage
+
+Note at this point if you inspect localStorage, we see the string `[object
+Object]` which is not helpful.
+
+[:ship: 5236f17](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/5236f17)
+Use `JSON.stringify` to convert Object represntation of Order into a string
+
+[:ship: 21b42cf](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/21b42cf)
+Load Order on componentDidMount
+
+:caution: Note that we have an error here in Order. When we're checking for
+`const isAvailable = fish.status ...`, since there's a slight delay getting
+fishes from firebase, there's no fish to check status of.
+
+[:ship: d2889e0](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d2889e0)
+Fix previous bug with fish = null
+
+:caution: Now we have another issue. The Order component is initially
+loaded with not fish, showing "Sorry fish is not available", and then one
+data is grabbed from Firebase it updates it correctly.
+
+[:ship: 85df9cb](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/85df9cb)
+Do not display any Order until entire Fish state is loaded from Firebase
 
 ## 20. Bi-directional Data Flow and Live State Editing
+
+xxx
 
 ## 21. Removing Items from State
 
