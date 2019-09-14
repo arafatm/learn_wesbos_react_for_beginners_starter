@@ -23,6 +23,11 @@ class App extends React.Component {
     });
   };
 
+  componentDidUpdate() {
+    console.log(this.state.order)
+    console.log("componentDidUpdate:") 
+  }
+
   componentWillUnmount() {
     base.removeBinding(this.ref);
   }
