@@ -15,12 +15,22 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+
+    const localStorageRef = localStorage.getItem(
+      this.props.match.params.storeId
+    );
+    console.log(localStorageRef);
+
     // `ref` in firebase is reference to particular piece of data
     // `storeId` in React Console under App -> Props -> match : Object -> params -> storeId
     this.ref = base.syncState(`${this.props.match.params.storeId}/fishes`, {
       context: this,
       state: 'fishes'
     });
+
+    if(localStorageRef) {
+      this.setState({order: JSON.parse(localStorageRef)});
+    }
   };
 
   componentDidUpdate() {
