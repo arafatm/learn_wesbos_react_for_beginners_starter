@@ -515,7 +515,75 @@ data is grabbed from Firebase it updates it correctly.
 [:ship: 85df9cb](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/85df9cb)
 Do not display any Order until entire Fish state is loaded from Firebase
 
+[:ship: 0e50e45](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/0e50e45 )
+Load State from localStorageRef so Order reloads when reloading page
+
 ## 20. Bi-directional Data Flow and Live State Editing
+
+We want to allow adding of Fish using the Inventory form and have it
+persist.  
+
+[:ship: ca1ccc1](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/ca1ccc1)
+Create an EditFishForm.js
+
+[:ship: 5739c98](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/5739c98)
+Display EditFishForm
+
+[:ship: 06c3548](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/06c3548)
+Set up the EditFishForm with actual fields
+
+[:ship: e9e4d45](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/e9e4d45)
+Pass fish to EditFishForm; Even though they're not displayed in the form, you
+can use the Inspector to see the react form has each fish.
+
+[:ship: aa90b28](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/aa90b28)
+Show fish value in the form
+
+:caution: We have console errors `Warning: Each child in a list should have a unique "key" prop.`
+
+[:ship: 1e1daef](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/1e1daef)
+Pass a key to each rendered EditFishForm
+
+:caution: We have another error `Warning: Failed prop type: You provided a 'value' prop to a form field without an 'onChange' handler. This will render a read-only field. If the field should be mutable use 'defaultValue'. Otherwise, set either 'onChange' or 'readOnly'.`
+
+React wants us to manage changes to state in a specific way. Basically we can't
+actually edit fish at this point. Typing in the EditFishForm doesn't change the
+value.
+
+[:ship: 402b4d8](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/402b4d8)
+Create an event handler to address the JS error.
+
+[:ship: 3945d94](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/3945d94)
+:bulb: Use `event.currentTarget` to see value of form field being edited
+
+[:ship: b0ac924](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/b0ac924)
+`event.currentTarget.value` to get actual value in form
+
+[:ship: 960396b](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/960396b)
+example of updating a field. However, here were explicitly only allowing update to name field. Wont work with other fields
+
+[:ship: 9fe7b1c](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/9fe7b1c)
+Use **Computed Property Names** to update any field. See output in console to verify
+- Depends on setting `name=...` property on the form field
+
+```javascript
+const updatedFish = { 
+  ...this.props.fish,
+  [event.currentTarget.name]: event.currentTarget.value // Computed Propert Name
+};
+```
+
+[:ship: 3860e28](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/3860e28)
+Create an UpdateFish method in App.js
+
+[:ship: 699ebc2](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/699ebc2)
+Pass UpdateFish as a prop to EditFishForm
+
+[:ship: d22b5f6](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/d22b5f6)
+have to pass the fish key to EditFishForm
+
+[:ship: 2014e16](https://github.com/arafatm/learn_wesbos_react_for_beginners_starter/commit/2014e16)
+:caution: Update the edited fish into state
 
 xxx
 
