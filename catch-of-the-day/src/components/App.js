@@ -21,16 +21,17 @@ class App extends React.Component {
     );
     console.log(localStorageRef);
 
+    if(localStorageRef) {
+      this.setState({order: JSON.parse(localStorageRef)});
+    }
+
+
     // `ref` in firebase is reference to particular piece of data
     // `storeId` in React Console under App -> Props -> match : Object -> params -> storeId
     this.ref = base.syncState(`${this.props.match.params.storeId}/fishes`, {
       context: this,
       state: 'fishes'
     });
-
-    if(localStorageRef) {
-      this.setState({order: JSON.parse(localStorageRef)});
-    }
   };
 
   componentDidUpdate() {
@@ -90,7 +91,11 @@ class App extends React.Component {
           fishes={this.state.fishes} 
           order={this.state.order} 
         />
-        <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
+        <Inventory 
+          addFish={this.addFish} 
+          loadSampleFishes={this.loadSampleFishes} 
+          fish={this.state.fishes}
+        />
       </div>
     );
   };
