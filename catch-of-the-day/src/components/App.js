@@ -57,6 +57,15 @@ class App extends React.Component {
     this.setState({ fishes: fishes }); // setState manages updating state.fishes
   };
 
+  UpdateFish = (fish, updatedFish) => {
+    // 1. copy current state
+    const fishes = { ...this.state.fishes };
+    // 2. update state
+    fishes[fish] = updatedFish;
+    // 3. save new state
+    this.setState({ fishes });
+  }
+
   loadSampleFishes = () => {
     console.log('Loading Sample Fishes');
     this.setState({ fishes: sampleFishes });
