@@ -8,7 +8,9 @@ class Inventory extends React.Component {
     return (
       <div className="inventory">
         <h2>Inventory</h2>
-        {Object.keys(this.props.fish).map(fish => <EditFishForm />)}
+        {Object.keys(this.props.fishes).map(key => (
+          <EditFishForm fish={this.props.fishes[key]} />
+        ))}
         <AddFishForm addFish={this.props.addFish} />
         <button className="" onClick={this.props.loadSampleFishes}>
           Load Sample Fishes
